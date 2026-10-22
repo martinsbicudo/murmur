@@ -79,9 +79,9 @@ Murmur is built from source; there is no prebuilt download.
 
 ## Install
 
-Clone or download this repository, open a terminal in it, and run:
-
 ```bash
+git clone https://github.com/martinsbicudo/murmur.git
+cd murmur
 make deps      # brew install ffmpeg, create ~/.config/murmur/.env
 make cert      # once: create a local code-signing identity (see below)
 make install   # build, sign, copy to /Applications/Murmur.app and launch it
