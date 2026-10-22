@@ -30,6 +30,7 @@ while people talk, lets you ask questions about what was said, and writes a Mark
 - [Privacy](#privacy)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## What you get
 
@@ -289,3 +290,7 @@ These are deliberate. Please open an issue to discuss before changing them:
 - `make icons` regenerates the brand assets from `brand/generate.py`. It needs the `render_png.py` script
   from the logo-design skill (set `RENDER_PNG=/path/to/render_png.py`); the generated files are committed,
   so you only need it when changing the icon.
+
+## License
+
+[MIT](LICENSE) © Victor M. Bicudo. Contributions are accepted under the same license.
