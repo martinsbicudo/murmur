@@ -40,6 +40,7 @@ done
 mkdir -p "$ROOT/brand/png"
 render "$SVG/murmur-app-icon.svg" "$ROOT/brand/png/murmur-app-icon-1024.png" 1024
 python3 "$RENDER" "$SVG/murmur-lockup-gradient.svg" -o "$ROOT/brand/png/murmur-lockup.png" --width 1500 --height 512 >/dev/null
+python3 "$RENDER" "$SVG/murmur-lockup-reversed.svg" -o "$ROOT/brand/png/murmur-lockup-dark.png" --width 1500 --height 512 >/dev/null
 python3 "$RENDER" "$SVG/murmur-lockup-reversed.svg" -o "$ROOT/brand/png/murmur-lockup-reversed.png" --width 1500 --height 512 --bg "#16181D" >/dev/null
 
 echo "icons written to $RES and $ROOT/brand/png"

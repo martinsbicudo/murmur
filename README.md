@@ -1,6 +1,9 @@
-<p align="center"><img src="brand/png/murmur-app-icon-1024.png" width="128" alt="Murmur icon"></p>
-
-<h1 align="center">Murmur</h1>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/png/murmur-lockup-dark.png">
+    <img src="brand/png/murmur-lockup.png" width="360" alt="Murmur">
+  </picture>
+</h1>
 
 <p align="center">
   Local meeting notes for the macOS menu bar.<br>

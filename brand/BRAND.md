@@ -41,7 +41,7 @@ legible on the graphite tile and in the menu bar.
 | `svg/menubar-idle.svg` | Menu bar template (black; macOS tints it) |
 | `svg/menubar-recording.svg` | Menu bar while recording (static gradient; the app animates it in code, see `RecordingIcon.swift`) |
 | `svg/murmur-lockup*.svg` | Symbol + wordmark |
-| `png/` | Rendered app icon and lockups for READMEs and slides |
+| `png/` | Rendered app icon and lockups for READMEs and slides: `murmur-lockup.png` (light backgrounds), `murmur-lockup-dark.png` (dark backgrounds, transparent), `murmur-lockup-reversed.png` (on a graphite tile) |
 | `concepts.png` | The concepts that were explored |
 
 ## Construction
