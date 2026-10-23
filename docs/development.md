@@ -30,7 +30,7 @@ make test
 make install
 ```
 
-Bump `VERSION` for a visible version change. `CFBundleVersion` is the build timestamp, set automatically.
+Murmur has no versions or releases: everyone builds from `main`. `CFBundleVersion` is the build timestamp, set automatically, so you can tell builds apart.
 
 ## How the app bundle is built
 
@@ -39,7 +39,7 @@ Bump `VERSION` for a visible version change. `CFBundleVersion` is the build time
 1. `swift build -c release --product Murmur`.
 2. Assembles `build/Murmur.app/Contents/{MacOS,Resources}`: the binary, `AppIcon.icns`, the menu bar
    PNGs and `.env.example` (as `env.example`, the template used by Settings).
-3. Fills `__VERSION__` / `__BUILD__` in `Resources/Info.plist`.
+3. Fills `__BUILD__` (the build timestamp) in `Resources/Info.plist`.
 4. Signs with the "Murmur Local Signing" identity (`--identifier local.murmur.app`), or ad-hoc with a
    warning if the identity doesn't exist.
 

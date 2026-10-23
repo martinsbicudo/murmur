@@ -6,7 +6,6 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 source "$ROOT/scripts/signing.env"
-VERSION="$(cat VERSION)"
 BUILD="$(date +%Y%m%d%H%M)"
 APP="$ROOT/build/Murmur.app"
 
@@ -18,7 +17,7 @@ mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp "$BIN" "$APP/Contents/MacOS/Murmur"
 cp Resources/AppIcon.icns Resources/menubar-*.png "$APP/Contents/Resources/"
 cp .env.example "$APP/Contents/Resources/env.example"
-sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD/" Resources/Info.plist > "$APP/Contents/Info.plist"
+sed -e "s/__BUILD__/$BUILD/" Resources/Info.plist > "$APP/Contents/Info.plist"
 
 if [[ -f "$SIGN_KEYCHAIN" ]] && security find-identity -p codesigning "$SIGN_KEYCHAIN" | grep -q "\"$SIGN_IDENTITY\""; then
   security unlock-keychain -p "$SIGN_KEYCHAIN_PASSWORD" "$SIGN_KEYCHAIN"
@@ -29,4 +28,4 @@ else
   codesign --force --sign - --identifier local.murmur.app "$APP"
 fi
 
-echo "built $APP ($VERSION build $BUILD)"
+echo "built $APP (build $BUILD)"
